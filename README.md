@@ -1,5 +1,5 @@
 # karabiner-fu
-My customization for https://github.com/tekezo/Karabiner
+My customizations for https://github.com/tekezo/Karabiner
 
 ## private.xml
 
