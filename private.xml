@@ -1,23 +1,37 @@
 <?xml version="1.0"?>
 <root>
-	<windownamedef>
-	    <name>Microsoft_Remote_Desktop</name>
-	    <regex>^Microsoft Remote Desktop$</regex>
-	    <regex>^$</regex>
-	    <regex>^User Accounts$</regex>
-	 </windownamedef>
+  <windownamedef>
+      <name>Microsoft_Remote_Desktop</name>
+      <!-- From the released rdp client -->
+      <regex>^Microsoft Remote Desktop$</regex>
+      <!-- From the beta rdp client -->
+      <regex>^$</regex>
+      <regex>^User Accounts$</regex>
+   </windownamedef>
 
-	<item>
+  <item>
     <name>vors private settings</name>
+
+    <item>
+      <name>Change Cmd+R to Ctrl+R for reverse search in terminal</name>
+      <identifier>vors.remap.app_term_optionR2controlR</identifier>
+      <only>TERMINAL</only>
+      <autogen>
+        __KeyToKey__ KeyCode::R, ModifierFlag::COMMAND_L, KeyCode::R, ModifierFlag::CONTROL_L
+      </autogen>
+    </item>
 
     <item>
       <name>Change command key to control key in Remote Desktop.</name>
       <appendix>+ Change command-tab to alt-tab.</appendix>
       <appendix>+ Send Windows key event when you pressed the command key alone.</appendix>
-      <identifier>private.remap.app_rdc_command_to_control</identifier>
+      <appendix>+ Command+Space to Shift+Alt (for language change).</appendix>
+      <identifier>vors.remap.app_rdc_command_to_control</identifier>
       <only>REMOTEDESKTOPCONNECTION</only>
       <windowname_not>Microsoft_Remote_Desktop</windowname_not>
-      <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::CONTROL_R</autogen>
+      <autogen>
+        __KeyToKey__ KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::OPTION_L, ModifierFlag::SHIFT_L
+      </autogen>
       <autogen>
         __KeyOverlaidModifier__
         KeyCode::COMMAND_L,
@@ -62,5 +76,5 @@
         KeyCode::VK_NEGATIVE_LOCK_CONTROL_R_FORCE_ON,
       </autogen>
     </item>
-	</item>
+  </item>
 </root>
