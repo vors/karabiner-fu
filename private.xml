@@ -26,6 +26,8 @@
       <appendix>+ Change command-tab to alt-tab.</appendix>
       <appendix>+ Send Windows key event when you pressed the command key alone.</appendix>
       <appendix>+ Command+Space to Shift+Alt (for language change).</appendix>
+      <appendix>+ Disable Ctrl + ScrollWheel (TrackPad) in RDP sessions</appendix>
+      
       <identifier>vors.remap.app_rdc_command_to_control</identifier>
       <only>REMOTEDESKTOPCONNECTION</only>
       <windowname_not>Microsoft_Remote_Desktop</windowname_not>
@@ -74,6 +76,14 @@
         Option::KEYTOKEY_BEFORE_KEYDOWN,
         KeyCode::VK_NEGATIVE_LOCK_CONTROL_L_FORCE_ON,
         KeyCode::VK_NEGATIVE_LOCK_CONTROL_R_FORCE_ON,
+      </autogen>
+      <autogen>
+        __ScrollWheelToKey__
+        ScrollWheel::UP, ModifierFlag::CONTROL_L, KeyCode::VK_NONE
+      </autogen>
+      <autogen>
+        __ScrollWheelToKey__
+        ScrollWheel::DOWN, ModifierFlag::CONTROL_L, KeyCode::VK_NONE
       </autogen>
     </item>
   </item>
