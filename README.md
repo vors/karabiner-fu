@@ -23,10 +23,11 @@ This option is based on the stock option
 And adds a couple of tweaks:
 
 - Narrows remapping only to the **actual remote session window** (see [Karabiner#632](https://github.com/tekezo/Karabiner/issues/632))
-- Remaps `Cmd+Space` to `Shift+Alt` (for language layout switch).
 
 - Disables Ctrl + TrackPad for zoom-in zoom-out.
 I found expirience annoying, when you scroll with two-fingers and hit `Cmd+Tab` to change a window.
+
+- Change Functional Keys to F1...F12
 
 ### Terminal
 
